@@ -127,7 +127,7 @@ def num_points_scored(name)
             data_item.each do |data, num|
               if data == :points
                 points = num
-                # return num -- also works
+              
               end
             end
           end
@@ -148,7 +148,7 @@ def shoe_size(name)
             data_item.each do |data, num|
               if data == :shoe
                 shoe = num
-                # return num -- also works
+              
               end
             end
           end
@@ -202,9 +202,13 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds()
+  biggestshoe= 0
   game_hash.each do |location, team_data|
     team_data[:players].each do |attribute, data|
-      if data[:shoe] > 18
+      if data[:shoe] > biggestshoe
+        biggestshoe= data[:shoe]
+        binding.pry
+        #biggestplayer= 
         return data[:rebounds]
       end
     end
