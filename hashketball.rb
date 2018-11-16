@@ -127,7 +127,7 @@ def num_points_scored(name)
             data_item.each do |data, num|
               if data == :points
                 points = num
-              
+
               end
             end
           end
@@ -148,7 +148,7 @@ def shoe_size(name)
             data_item.each do |data, num|
               if data == :shoe
                 shoe = num
-              
+
               end
             end
           end
@@ -214,3 +214,5 @@ def big_shoe_rebounds()
     end
   end
 end
+
+big_shoe_rebounds
